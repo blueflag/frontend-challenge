@@ -1,0 +1,17 @@
+.tabs {
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.tabs-item {
+  font-weight: 700;
+  font-size: 18px;
+  padding: 10px;
+  cursor: pointer;
+  color: #999;
+}
+
+.tabs-item.active {
+  border-bottom: 4px solid #222;
+  color: #222;
+}
