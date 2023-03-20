@@ -1,8 +1,7 @@
 {
   "short_name": "Blue Flag Front End Coding Exercise",
   "name": "Blue Flag Front End Coding Exercise",
-  "icons": [
-    {],
+  "icons": [],
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
