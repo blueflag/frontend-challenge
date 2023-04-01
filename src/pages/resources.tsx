@@ -39,12 +39,12 @@ const Resources = () => {
             <p className="code">{data.code}</p>
             <p className="title">{data.title}</p>
             <hr />
-            <p className="datas">Attempt: {datasNum[i].attempt}</p>
-            <p className="datas">Completed: {datasNum[i].complete}</p>
-            <p className="datas">Fail: {datasNum[i].fail}</p>
-            <p className="datas">Pass: {datasNum[i].pass}</p>
-            <p className="datas">Enroll: {datasNum[i].enrol}</p>
-            <p className="datas">Attend: {datasNum[i].attend}</p>
+            <p className="datas">Attempt: {datasNum[i]?.attempt}</p>
+            <p className="datas">Completed: {datasNum[i]?.complete}</p>
+            <p className="datas">Fail: {datasNum[i]?.fail}</p>
+            <p className="datas">Pass: {datasNum[i]?.pass}</p>
+            <p className="datas">Enroll: {datasNum[i]?.enrol}</p>
+            <p className="datas">Attend: {datasNum[i]?.attend}</p>
           </Card>
         );
       })}
