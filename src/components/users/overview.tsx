@@ -87,7 +87,6 @@ const Overview = (): JSX.Element => {
       setNotInteracted(res);
     }
   }, [data?.records, data?.resources]);
-  console.log(notInteracted);
   return (
     <OverviewContainer>
       <h2>Quick Overview</h2>
