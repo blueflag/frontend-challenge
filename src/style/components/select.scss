@@ -1,0 +1,21 @@
+.select{
+  &__control{
+    @extend .rounded-8px;
+    @extend .minh-33px;
+  }
+  &__indicator-separator{
+    @extend .d-none;
+  }
+  &-disable-icon .select__indicator{
+    @extend .d-none;
+  }
+  &-sm{
+    .select__value-container,
+    .select__input-container{
+      @extend .py-0;
+    }
+    .select__input-container{
+      @extend .my-0;
+    }
+  }
+}
