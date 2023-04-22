@@ -1,22 +1,168 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 .Header {
-  padding: 1rem 2rem .7rem;
+  padding: 1rem 2rem 0.7rem;
   background-color: #072630;
 }
 
 .Main {
   padding: 1rem 2rem;
+  background-color: #EEEEEE;
+}
+
+.mainpPageContainer {
+  justify-content: center;
+}
+
+.rowCenter {
+  max-width: 65%;
+  justify-content: center;
+}
+
+.userlLearningCard {
+  background-color: #fafafa;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.userCompletionCard {
+  background-color: #fafafa;
+  border-radius: 10px;
+  height: 550px;
+  padding: 25px;
+}
+
+.userLearningResourceCard {
+  background-color: #fafafa;
+  border-radius: 10px;
+  height: 300px;
+  height: 480px;
+  padding: 25px;
+}
+
+.userSelection {
+  padding: 25px 25px 25px 0px;
+  justify-content: start;
+}
+
+.tableUserLearning {
+  --bs-table-bg: transparent;
+  --bs-table-accent-bg: transparent;
+  --bs-table-striped-color: #181c32;
+  --bs-table-striped-bg: rgba(245, 248, 250, 0.75);
+  --bs-table-active-color: #181c32;
+  --bs-table-active-bg: #f5f8fa;
+  --bs-table-hover-color: #181c32;
+  --bs-table-hover-bg: #f5f8fa;
+  width: 100%;
+  color: #181c32;
+  vertical-align: top;
+  border-color: #eff2f5;
+  height: 350px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+.tableUserLearning > :not(caption) > * > * {
+  padding: 0.75rem 0.75rem;
+  background-color: var(--bs-table-bg);
+  border-bottom-width: 1px;
+  box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+}
+.tableUserLearning > tbody {
+  vertical-align: inherit;
+}
+.tableUserLearning > thead {
+  vertical-align: bottom;
+}
+.tableUserLearning > td {
+  padding: 5px;
+}
+.tableUserLearning > :not(:first-child) {
+  border-top: 2px solid currentColor;
+}
+.tableUserLearning-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.userLearningRecordSummaryCard {
+  width: 100%;
+  height: 100%;
+}
+
+.userLearningRecordSummaryTitle {
+  justify-content: center;
+  display: flex;
+  padding-bottom: 30px;
+}
+.userLearningRecordSummaryStatus {
+  justify-content: center;
+  display:block;
+}
+
+.userLearningRecordSummaryBody {
+  justify-content: center;
+  display: flex;
+  padding-bottom: 30px;
+}
+
+/* Style the select element */
+select {
+  cursor: pointer;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  appearance: none;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+/* Style the options in the select element */
+select option {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+/* Style the select element when it is focused */
+select:focus {
+  outline: none;
+  border-color: #66afe9;
+  box-shadow: 0 0 8px 0 rgba(102,175,233,0.6);
+}
+
+/* Style the select element when it is disabled */
+select:disabled {
+  opacity: 0.5;
+}
+
+.inputoption {
+  font-size: 18px;
+  width: 50px;
+  cursor: pointer;
+  height: 15px;
+}
+.inputlabel {
+  cursor: pointer;
+  font-size: 18px;
 }
