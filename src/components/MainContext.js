@@ -307,7 +307,6 @@ const doGetLearningResourceSummaryData = () => {
     );
     return matchingData2 ? { ...data1, ...matchingData2 } : data1;
   });
-  console.log("allCompleteData",allCompleteData)
 
   dispatch({
     type: ACTION.GET_LEARNINGRESOURCESUMMARY_DATA,
