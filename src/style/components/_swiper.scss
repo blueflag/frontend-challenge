@@ -1,0 +1,21 @@
+.swiper{
+  &-slide-h-auto .swiper-slide{
+    @extend .h-auto;
+  }
+  &,
+  &-wrapper{
+    @extend .z-index-inherit;
+  }
+  &-pagination-bottom-0{
+    .swiper-pagination{
+      @extend .bottom-0;
+    }
+  }
+  &-vertical{
+    .swiper-slide{
+      @extend .d-flex;
+      @extend .justify-content-center;
+      @extend .align-items-center;
+    }
+  }
+}

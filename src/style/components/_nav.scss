@@ -1,0 +1,55 @@
+.nav-left-sidebar{
+  @extend .flex-column;
+  .nav-link{
+    @extend .text-white;
+    @extend .d-flex;
+    @extend .align-items-center;
+    @extend .cursor-pointer;
+    @extend .rounded-te-100px;
+    @extend .rounded-be-100px;
+    @extend .rounded-ts-30px;
+    @extend .rounded-bs-30px;
+    svg{
+      @extend .me-2;
+    }
+    &:hover{
+      @extend .bg-gray-1;
+    }
+  }
+  .nav-item{
+    @extend .mb-2;
+  }
+  &.nav-warning .nav-link{
+    @extend .text-white;
+    &.active{
+      &,
+      &:hover{
+        @extend .bg-warning;
+        @extend .text-dark;
+      }
+    }
+    &:hover{
+      @extend .bg-white;
+      @extend .text-dark;
+    }
+  }
+  &.nav-danger{
+    .nav-item{
+      @extend .mb-1;
+    }
+    .nav-link{
+      @extend .text-white;
+      &.active{
+        &,
+        &:hover{
+          @extend .bg-danger;
+          @extend .text-white;
+        }
+      }
+      &:hover{
+        @extend .bg-white;
+        @extend .text-dark;
+      }
+    }
+  }
+}

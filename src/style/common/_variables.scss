@@ -1,0 +1,105 @@
+$primary: #00beff;
+
+$dark: #072630;
+$dark-100: #eceeef;
+$dark-900: #0d495c;
+
+$white: #ffffff;
+$transparent: transparent;
+$base: #444444;
+
+$spacer: 1rem !default;
+$spacers: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+ (
+   0: 0,
+   1: ($spacer * .25),
+   2: ($spacer * .5),
+   3: $spacer,
+   4: ($spacer * 1.5),
+   5: ($spacer * 2),
+   6: ($spacer * 2.5),
+   7: ($spacer * 3),
+   8: ($spacer * 3.5),
+   9: ($spacer * 4),
+   10: ($spacer * 4.5)
+ ),
+ $spacers
+);
+
+$font-sizes: (
+  1: 2.25rem,
+  2: 1.875rem,
+  3: 1.5625rem,
+  4: 1.25rem,
+  5: 1.125rem,
+  6: 1.025rem,
+  7: 0.75rem,
+  8: 0.25rem,
+);
+
+$grays: (
+  100: #f8f9fa,
+  200: #e9ecef,
+  300: #dee2e6,
+  400: #ced4da,
+  500: #adb5bd,
+  600: #6c757d,
+  700: #495057,
+  800: #343a40,
+  900: #212529
+);
+
+@each $key, $value in $grays {
+  $class: 'text-gray-' + $key;
+  .#{$class} {
+    color: $value;
+  }
+}
+
+@each $key, $value in $grays {
+  $class: 'bg-gray-' + $key;
+  .#{$class} {
+    background-color: $value;
+  }
+}
+
+@each $key, $value in $grays {
+  $class: 'border-bottom-1-solid-gray-' + $key;
+  .#{$class} {
+    border-bottom: 1px solid $value;
+  }
+}
+
+
+@for $i from 0 through 500 {
+
+  [data-width="#{$i}"] {
+    width: #{($i * 1)}px;
+  }
+
+  [data-height="#{$i}"] {
+    height: #{($i * 1)}px;
+  }
+
+}
+
+.fs{
+  @for $i from 0 through 100 {
+    &-#{$i} {
+      font-size: #{($i * 1)}px;
+    }
+  }
+}
+
+.rounded-x{
+  &-top-8{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  &-bottom-8{
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+}

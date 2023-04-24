@@ -1,0 +1,25 @@
+.btn,
+.btn-mask{
+  @extend .rounded-8px;
+  @extend .px-4;
+  @extend .py-2;
+  @extend .d-inline-flex;
+  @extend .align-items-center;
+  @extend .justify-content-center;
+  &-primary{
+    @extend .bg-primary;
+    @extend .text-white;
+  }
+  &:focus,
+  &-link:focus{
+    @extend .box-shadow-none;
+  }
+  &-light{
+    @extend .bg-gray-1;
+  }
+  &-primary-light{
+    @extend .bg-primary-light;
+    @extend .text-primary;
+    @extend .fw-700;
+  }
+}

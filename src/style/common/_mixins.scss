@@ -1,0 +1,60 @@
+@mixin border( $borderWidth, $borderStyle, $borderColor ){
+  border-width: $borderWidth;
+  border-style: $borderStyle;
+  border-color: $borderColor;
+}
+
+@mixin border-bottom( $borderWidth, $borderStyle, $borderColor ){
+  border-bottom-width: $borderWidth;
+  border-bottom-style: $borderStyle;
+  border-bottom-color: $borderColor;
+}
+
+@mixin border-top( $borderWidth, $borderStyle, $borderColor ){
+  border-top-width: $borderWidth;
+  border-top-style: $borderStyle;
+  border-top-color: $borderColor;
+}
+
+@mixin cursor( $cursor ){
+  cursor: $cursor;
+}
+
+@mixin scrollbar( $scrollbarWidth, $scrollbarBg, $scrollbarTrackBg, $scrollbarThumbBg, $scrollbarThumbRounded ){
+  &::-webkit-scrollbar-track{
+    background-color: $scrollbarTrackBg;
+  }
+  &::-webkit-scrollbar{
+    width: $scrollbarWidth;
+    background-color: $scrollbarBg;
+  }
+  &::-webkit-scrollbar-thumb{
+    height: 100px;
+    background-color: $scrollbarThumbBg;
+    border-radius: $scrollbarThumbRounded;
+  }
+}
+
+
+@mixin placeholder {
+  ::-webkit-input-placeholder { @content }
+  :-moz-placeholder           { @content }
+  ::-moz-placeholder          { @content }
+  :-ms-input-placeholder      { @content }
+}
+
+@mixin transform($transforms...) {
+  $transform-list: join($transforms, null, space);
+
+  -webkit-transform: $transform-list;
+     -moz-transform: $transform-list;
+      -ms-transform: $transform-list;
+       -o-transform: $transform-list;
+          transform: $transform-list;
+}
+
+@mixin transition( $transition... ) {
+	-webkit-transition: $transition;
+	-o-transition: $transition;
+	transition: $transition;
+}

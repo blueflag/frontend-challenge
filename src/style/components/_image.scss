@@ -1,0 +1,15 @@
+.image-container{
+  @extend .w-100p;
+  span,
+  img{
+    @extend .position-static;
+  }
+  img{
+    @extend .w-auto;
+    @extend .h-auto;
+    @extend .maxw-100;
+    @extend .minh-70px;
+    @extend .maxh-70px;
+    object-fit: contain;
+  }
+}

@@ -1,0 +1,19 @@
+.form{
+  &-label{
+    @extend .mb-1;
+  }
+  &-control{
+    @extend .rounded-8px;
+    &-lg{
+      @extend .py-2;
+      @extend .px-3;
+      @extend .fs-16px;
+    }
+    &-rounded{
+      @extend .rounded-100px;
+    }
+  }
+  &-range::-webkit-slider-thumb{
+    @extend .bg-danger;
+  }
+}

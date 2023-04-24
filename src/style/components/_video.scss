@@ -1,0 +1,7 @@
+.post-video{
+  @extend .position-relative;
+  video{
+    @extend .w-100;
+    @extend .h-auto;
+  }
+}

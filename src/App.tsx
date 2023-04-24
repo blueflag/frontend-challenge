@@ -1,12 +1,21 @@
-import React from 'react';
+import Main from './components/atom/main'
+import LearningOverview from 'components/atom/dashboard/LearningOverview'
+import ResourcesUsersOverview from 'components/atom/dashboard/ResourcesUsersOverview'
+import LearningRecordsTable from 'components/atom/dashboard/LearningRecordsTable'
+import Greetings from 'components/atom/dashboard/Greetings'
 
-export default function App(): React.ReactElement {
-    return <div>
-        <header className="Header">
-            <img src="https://blueflag.com.au/assets/logos/blueflag-logo.svg" width="130" alt="logo" />
-        </header>
-        <main className="Main">
-            ...
-        </main>
-    </div>;
+const App = () => {
+
+    return(
+        <div>
+          <Main>
+            <Greetings />
+            <LearningOverview />
+            <ResourcesUsersOverview />
+            <LearningRecordsTable />
+          </Main>
+        </div>
+    )
 }
+
+export default App

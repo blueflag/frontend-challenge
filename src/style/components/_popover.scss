@@ -1,0 +1,18 @@
+.popupover{
+  @extend .position-relative;
+  @extend .border-none;
+  @extend .cursor-pointer;
+  &:hover .popover-content{
+    @extend .d-block;
+  }
+  .popover-content{
+    @extend .position-absolute;
+    @extend .rounded-8px; 
+    @extend .box-shadow-1; 
+    @extend .bg-white; 
+    @extend .z-index-1020;
+    &[data-position="bottom"]{
+      @extend .top-0;
+    }
+  }
+}
