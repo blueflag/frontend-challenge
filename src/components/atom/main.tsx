@@ -1,15 +1,25 @@
 import React from 'react'
-import Header from './header'
+import Sidebar from './sidebar'
 import Container from './container'
+import Header from './header'
+import { useMediaQuery } from 'react-responsive'
 
 const Main: React.FC<Props> = ({children}:Props) => {
+
+    const screenLG = useMediaQuery({
+        query: '(min-width: 1200px)'
+    })
+
     return(
-        <React.Fragment>
+    <div className="d-flex">
+        { screenLG && <Sidebar /> }
+        <div className="w-100 bg-dark-100 pb-5">
             <Header />
             <Container>
                 {children}
             </Container>
-        </React.Fragment>
+        </div>
+    </div>
     )
 }
 

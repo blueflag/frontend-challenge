@@ -4,9 +4,9 @@ import {
 } from 'react-bootstrap'
 import packageJson from '../../../package.json'
 
-const Image:React.FC<Props> = ({ src, height, width, alt }) => {
+const Image:React.FC<Props> = ({ src, height, width, alt, className }) => {
     return(
-        <RbImage src={src} width={width} height={height} alt={packageJson.name} />
+        <RbImage src={src} width={width} height={height} alt={packageJson.name+' | '+alt} className={className}/>
     )
 }
 
@@ -15,6 +15,7 @@ interface Props {
     alt: string
     height: number
     width: number
+    className?: string
 }
 
 Image.defaultProps = {

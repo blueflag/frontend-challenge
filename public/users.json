@@ -3,114 +3,133 @@
    "id": "9d486996-370f-4e82-8b4e-00d28b289182",
    "givenName": "Pamela",
    "familyName": "Kelsey",
-   "jobPositions": "Marketing Manager"
+   "jobPositions": "Marketing Manager",
+   "avatar": "https://i.pravatar.cc/101/101"
  },
  {
    "id": "b4064877-7d61-4567-87de-18d1075127d5",
    "givenName": "Alvin",
    "familyName": "Meadows",
-   "jobPositions": "Marketing Insights Analyst"
+   "jobPositions": "Marketing Insights Analyst",
+   "avatar": "https://i.pravatar.cc/102/102"
  },
  {
    "id": "360fc342-349a-440c-b767-dea593062aa6",
    "givenName": "Alicia",
    "familyName": "Lum",
-   "jobPositions": "Technician"
+   "jobPositions": "Technician",
+   "avatar": "https://i.pravatar.cc/103/103"
  },
  {
    "id": "36f91f1f-7c84-4689-b607-74a0b78f4af2",
    "givenName": "Bernard",
    "familyName": "Cruz",
-   "jobPositions": "Service Advisor"
+   "jobPositions": "Service Advisor",
+   "avatar": "https://i.pravatar.cc/104/104"
  },
  {
    "id": "81dc346b-d9d6-43f2-a867-402b56e8e10f",
    "givenName": "David",
    "familyName": "Sowers",
-   "jobPositions": "Detailer"
+   "jobPositions": "Detailer",
+   "avatar": "https://i.pravatar.cc/105/105"
  },
  {
    "id": "d3025baa-9e8a-4bb2-a3fe-27135a50ee0b",
    "givenName": "Lydia",
    "familyName": "Landman",
-   "jobPositions": "Workshop Controller"
+   "jobPositions": "Workshop Controller",
+   "avatar": "https://i.pravatar.cc/106/106"
  },
  {
    "id": "3a1e595f-12ed-4369-a82e-f8912125fdbb",
    "givenName": "Justin",
    "familyName": "Goodwin",
-   "jobPositions": "Reconditioner"
+   "jobPositions": "Reconditioner",
+   "avatar": "https://i.pravatar.cc/107/107"
  },
  {
    "id": "4acb3dee-c96f-4298-89d5-b50eb6c5fb6d",
    "givenName": "Ann",
    "familyName": "Garcia",
-   "jobPositions": "Sales Consultant"
+   "jobPositions": "Sales Consultant",
+   "avatar": "https://i.pravatar.cc/108/108"
  },
  {
    "id": "412be3cf-f081-4fb4-b255-b8cef33c5712",
    "givenName": "Rachel",
    "familyName": "Edwards",
-   "jobPositions": "Stock Controller"
+   "jobPositions": "Stock Controller",
+   "avatar": "https://i.pravatar.cc/109/109"
  },
  {
    "id": "c4443ba8-90f2-48f2-a821-481b0d27ea22",
    "givenName": "Doris",
    "familyName": "Cicero",
-   "jobPositions": "Wholesale Manager"
+   "jobPositions": "Wholesale Manager",
+   "avatar": "https://i.pravatar.cc/110/110"
  },
  {
    "id": "73e2d10a-7386-47dc-ac56-5adf943441f2",
    "givenName": "Paul",
    "familyName": "Lloyd",
-   "jobPositions": "Pre-Delivery Coordinator"
+   "jobPositions": "Pre-Delivery Coordinator",
+   "avatar": "https://i.pravatar.cc/111/111"
  },
  {
    "id": "7fb5dc5c-a7ec-43c9-bd43-441f22fab849",
    "givenName": "Neil",
    "familyName": "Roberts",
-   "jobPositions": "Aftersales Channel Analyst"
+   "jobPositions": "Aftersales Channel Analyst",
+   "avatar": "https://i.pravatar.cc/112/112"
  },
  {
    "id": "4d75829b-2a5b-4355-b677-3e20ce7e6f30",
    "givenName": "Chad",
    "familyName": "Davis",
-   "jobPositions": "Quality Manager & Product Engineer"
+   "jobPositions": "Quality Manager & Product Engineer",
+   "avatar": "https://i.pravatar.cc/113/113"
  },
  {
    "id": "746f84d4-51ec-41c6-a3dd-9520cfc56272",
    "givenName": "Garret",
    "familyName": "Matus",
-   "jobPositions": "Parts & Accessories Pricing Analyst"
+   "jobPositions": "Parts & Accessories Pricing Analyst",
+   "avatar": "https://i.pravatar.cc/114/114"
  },
  {
    "id": "a7ae7b48-701c-482d-95ee-ee4625388ad1",
    "givenName": "Nicholas",
    "familyName": "Dockery",
-   "jobPositions": "Strategic Procurement Manager"
+   "jobPositions": "Strategic Procurement Manager",
+   "avatar": "https://i.pravatar.cc/115/115"
  },
  {
    "id": "7bc508b8-112a-4cad-a822-89ba0fae323c",
    "givenName": "Cecil",
    "familyName": "Williams",
-   "jobPositions": "Director - Aftersales"
+   "jobPositions": "Director - Aftersales",
+   "avatar": "https://i.pravatar.cc/116/116"
  },
  {
    "id": "de14fb0b-8c5c-4b15-a11a-059d331a0324",
    "givenName": "Chery",
    "familyName": "Braswell",
-   "jobPositions": "Parts Interpreter"
+   "jobPositions": "Parts Interpreter",
+   "avatar": "https://i.pravatar.cc/117/117"
  },
  {
    "id": "57ef3f5d-72a5-4b09-89c2-ce3fddd57990",
    "givenName": "Donna",
    "familyName": "Rowell",
-   "jobPositions": "Parts Manager"
+   "jobPositions": "Parts Manager",
+   "avatar": "https://i.pravatar.cc/118/118"
  },
  {
    "id": "792c5147-278e-4368-bd9c-3fb1004c6848",
    "givenName": "Terri",
    "familyName": "Loughran",
-   "jobPositions": "Parts Staff"
+   "jobPositions": "Parts Staff",
+   "avatar": "https://i.pravatar.cc/119/119"
  }
 ]

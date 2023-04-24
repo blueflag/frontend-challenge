@@ -1,18 +1,12 @@
 import React from 'react'
 import {
-    Container as RbContainer,
-    Row,
-    Col
+    Container as RbContainer
 } from 'react-bootstrap'
 
 const Container:React.FC<Props> = ({children}:Props) => {
     return(
         <RbContainer className="mt-5">
-            <Row>
-                <Col md={10} className="mx-auto">
-                    {children}
-                </Col>
-            </Row>
+            <div className="px-md-4">{children}</div>
         </RbContainer>
     )
 }

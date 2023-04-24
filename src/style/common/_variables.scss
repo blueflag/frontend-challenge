@@ -1,6 +1,9 @@
 $primary: #00beff;
 
 $dark: #072630;
+$dark-100: #eceeef;
+$dark-900: #0d495c;
+
 $white: #ffffff;
 $transparent: transparent;
 $base: #444444;
@@ -35,3 +38,68 @@ $font-sizes: (
   7: 0.75rem,
   8: 0.25rem,
 );
+
+$grays: (
+  100: #f8f9fa,
+  200: #e9ecef,
+  300: #dee2e6,
+  400: #ced4da,
+  500: #adb5bd,
+  600: #6c757d,
+  700: #495057,
+  800: #343a40,
+  900: #212529
+);
+
+@each $key, $value in $grays {
+  $class: 'text-gray-' + $key;
+  .#{$class} {
+    color: $value;
+  }
+}
+
+@each $key, $value in $grays {
+  $class: 'bg-gray-' + $key;
+  .#{$class} {
+    background-color: $value;
+  }
+}
+
+@each $key, $value in $grays {
+  $class: 'border-bottom-1-solid-gray-' + $key;
+  .#{$class} {
+    border-bottom: 1px solid $value;
+  }
+}
+
+
+@for $i from 0 through 500 {
+
+  [data-width="#{$i}"] {
+    width: #{($i * 1)}px;
+  }
+
+  [data-height="#{$i}"] {
+    height: #{($i * 1)}px;
+  }
+
+}
+
+.fs{
+  @for $i from 0 through 100 {
+    &-#{$i} {
+      font-size: #{($i * 1)}px;
+    }
+  }
+}
+
+.rounded-x{
+  &-top-8{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  &-bottom-8{
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+}
