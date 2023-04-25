@@ -1,3 +1,9 @@
+* {
+  box-sizing:  border-box;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -19,4 +25,73 @@ code {
 
 .Main {
   padding: 1rem 2rem;
+}
+
+.Tabs {
+  width: 80%;
+  height: auto;
+  min-height: 400px;
+  background: #072630;
+  margin: 3.5rem auto 1.5rem;
+  padding: 2rem 1rem;
+  color: #E8F0F2;
+  @media (max-width: 769px) {
+    padding: 2rem 0;
+  }
+}
+
+ul.nav {
+  width: 60%;
+  margin: 0 auto 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #39A2DB;
+  padding-left: 0px;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+}
+
+ul.nav li {
+  width: 50%;
+  padding: 1rem;
+  list-style: none;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+ul.nav li:hover {
+  background: rgba(50, 224, 196, 0.15);
+}
+
+ul.nav li.active {
+  background: #39A2DB;
+}
+
+table {
+  border-collapse: collapse;
+  color: #000;
+  background-color: #FFFF;
+  border: 1px solid #39A2DB;
+  width: 100%;
+}
+
+th {
+  color: #FFF;;
+  border-bottom: 1px solid #39A2DB;
+  padding: 1rem;
+  text-align: left;
+  background-color: #39A2DB;
+}
+
+td {
+  text-align: left;
+  padding: 1rem;
+  
+}
+
+tr:nth-child(even) {
+  background-color: #eeeeee;
 }
