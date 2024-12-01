@@ -9,6 +9,7 @@ type LearningResource = {
     id: string;
     code: string;
     title: string;
+    type?: string;
 };
 
 type LearningRecordVerb = 'ATTEMPT' | 'COMPLETE' | 'FAIL' | 'PASS' | 'ENROL' | 'ATTEND';
