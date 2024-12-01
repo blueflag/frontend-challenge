@@ -14,6 +14,7 @@ export default function UserCard(props: Props): React.ReactElement {
 
     return (
         <Card
+            data-testid='user-card-component'
             size='small'
             title={`${user.givenName} ${user.familyName}`}
             extra={<Tag color='purple'>{user.jobPositions}</Tag>}
