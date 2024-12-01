@@ -6,21 +6,28 @@ type Props = {
     data: User[];
 }
 
+const GRID_LAYOUT = {
+    gutter: 16,
+    xs: 1,
+    sm: 2,
+    md: 2,
+    lg: 3,
+    xl: 3,
+    xxl: 4,
+};
+
 export default function UsersList(props: Props): React.ReactElement {
     const { isLoading, data } = props;
 
     return (
         <List
-            grid={{
-                gutter: 16,
-                xs: 1,
-                sm: 2,
-                md: 3,
-                lg: 4,
-                xl: 4,
-                xxl: 4,
-            }}
+            grid={GRID_LAYOUT}
             loading={isLoading}
+            pagination={{
+                position: 'bottom',
+                align: 'center',
+                pageSize: 12,
+            }}
             dataSource={data}
             renderItem={(user: User) => (
                 <List.Item>
