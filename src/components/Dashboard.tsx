@@ -9,33 +9,33 @@ import LearningResourcesList from './LearningResourcesList';
 type Category = 'user' | 'resource';
 
 const CATEGORY_OPTIONS: SegmentedOptions = [
-	{ label: 'Learning Resources', value: 'resource', icon: <BookOutlined /> },
-	{ label: 'Users', value: 'user', icon: <UserOutlined /> },
+    { label: 'Learning Resources', value: 'resource', icon: <BookOutlined /> },
+    { label: 'Users', value: 'user', icon: <UserOutlined /> },
 ];
 
 export default function Dashboard(): React.ReactElement {
-	const [ category, setCategory ] = useState<Category>('resource');
-	const { isLoading, users, learningResources } = useAppData();
+    const [ category, setCategory ] = useState<Category>('resource');
+    const { isLoading, users, learningResources } = useAppData();
 
-	return (
-		<>
-			<Row>
-				<Col>
-					<Segmented
-						options={CATEGORY_OPTIONS}
-						defaultValue='resource'
-						onChange={(value) => setCategory(value as Category)}
-					/>
-				</Col>
-			</Row>
-			<Row className='mt-4'>
-				<Col span={24}>
-					{category === 'user'
-						? <UsersList isLoading={isLoading} data={users} />
-						: <LearningResourcesList isLoading={isLoading} data={learningResources} />
-					}
-				</Col>
-			</Row>
-		</>
-	);
+    return (
+        <>
+            <Row>
+                <Col>
+                    <Segmented
+                        options={CATEGORY_OPTIONS}
+                        defaultValue='resource'
+                        onChange={(value) => setCategory(value as Category)}
+                    />
+                </Col>
+            </Row>
+            <Row className='mt-4'>
+                <Col span={24}>
+                    {category === 'user'
+                        ? <UsersList isLoading={isLoading} data={users} />
+                        : <LearningResourcesList isLoading={isLoading} data={learningResources} />
+                    }
+                </Col>
+            </Row>
+        </>
+    );
 }
