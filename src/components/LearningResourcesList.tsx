@@ -60,7 +60,7 @@ export default function LearningResourcesList(props: Props): React.ReactElement 
 
     return (
         <div data-testid='learning-resources-list-component'>
-            <Row justify='space-between'>
+            <Row data-testid='learning-resources-list-sorting-components' justify='space-between'>
                 <Col span={24} md={12}>
                     <span className='mr-2'>Sort by</span>
                     <Select

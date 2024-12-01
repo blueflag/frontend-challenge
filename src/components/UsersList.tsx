@@ -55,7 +55,7 @@ export default function UsersList(props: Props): React.ReactElement {
 
     return (
         <div data-testid='users-list-component'>
-            <Row justify='space-between'>
+            <Row data-testid='users-list-sorting-components' justify='space-between'>
                 <Col span={24} lg={18}>
                     <span className='mr-2'>Sort by</span>
                     <Select

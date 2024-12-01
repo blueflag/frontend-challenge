@@ -12,3 +12,25 @@ test('renders the component', () => {
     const component = screen.getByTestId('learning-resources-list-component');
     expect(component).toBeInTheDocument();
 });
+
+test('renders the Search filter component', () => {
+    render(<LearningResourcesList
+            isLoading={false}
+            learningRecords={[]}
+            learningResources={[]}
+            users={[]}
+        />);
+    const component = screen.getByPlaceholderText('Search for Resource Title...');
+    expect(component).toBeInTheDocument();
+});
+
+test('renders the Sorting components', () => {
+    render(<LearningResourcesList
+            isLoading={false}
+            learningRecords={[]}
+            learningResources={[]}
+            users={[]}
+        />);
+    const component = screen.getByTestId('learning-resources-list-sorting-components');
+    expect(component).toBeInTheDocument();
+});
