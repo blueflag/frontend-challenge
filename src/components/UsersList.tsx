@@ -54,7 +54,7 @@ export default function UsersList(props: Props): React.ReactElement {
     const learningResourceOptions = learningResources.map((resource) => ({ value: resource.title, label: resource.title }));
 
     return (
-        <>
+        <div data-testid='users-list-component'>
             <Row justify='space-between'>
                 <Col span={24} lg={18}>
                     <span className='mr-2'>Sort by</span>
@@ -116,7 +116,7 @@ export default function UsersList(props: Props): React.ReactElement {
                     />
                 </Col>
             </Row>
-        </>
+        </div>
     );
 }
 
