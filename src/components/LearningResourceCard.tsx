@@ -1,11 +1,11 @@
 import React from 'react';
 import { Card, Progress, ProgressProps, Tag, Tooltip } from 'antd';
-import { CheckCircleOutlined } from '@ant-design/icons';
 
 type Props = {
     resource: LearningResource;
     participants: User[];
-    learningRecords: LearningRecord[];
+    completers: User[];
+    completionPercentage: number;
     totalUsers: number;
 }
 
@@ -16,8 +16,7 @@ const COMPLETION_GRADIENT: ProgressProps['strokeColor'] = {
 const SUCCESS_HEX = '#B7EB8F';
 
 export default function LearningResourceCard(props: Props): React.ReactElement {
-    const { resource, participants, totalUsers, learningRecords } = props;
-    const successfulRecords = learningRecords.filter((record) => record.verb === 'COMPLETE' || record.verb === 'PASS');
+    const { resource, participants, completers, totalUsers, completionPercentage } = props;
 
     const formatPercentage = (percent: number | undefined): string => (percent || 0).toFixed(1) + '%';
 
@@ -38,9 +37,9 @@ export default function LearningResourceCard(props: Props): React.ReactElement {
                 />
             </Tooltip>
             <p>Completion</p>
-            <Tooltip title={`${successfulRecords.length} out of ${participants.length} Participants`}>
+            <Tooltip title={`${completers.length} out of ${participants.length} Participants`}>
                 <Progress
-                    percent={(successfulRecords.length / participants.length) * 100}
+                    percent={completionPercentage}
                     format={formatPercentage}
                     strokeColor={SUCCESS_HEX}
                     status='active'

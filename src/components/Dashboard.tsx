@@ -34,7 +34,7 @@ export default function Dashboard(): React.ReactElement {
                         ? <UsersList isLoading={isLoading} data={users} />
                         : <LearningResourcesList
                             isLoading={isLoading}
-                            data={learningResources}
+                            learningResources={learningResources}
                             users={users}
                             learningRecords={learningRecords}
                           />
