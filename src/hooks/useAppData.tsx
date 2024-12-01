@@ -1,24 +1,18 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios'; // Axios uses XHR under the hood
 
-type User = {
-	id: string;
-	givenName: string;
-	familyName: string;
-	jobPositions: string;
-};
-type LearningResource = {
-	id: string;
-	code: string;
-	title: string;
-};
-type LearningRecordVerb = 'ATTEMPT' | 'COMPLETE' | 'FAIL' | 'PASS' | 'ENROL' | 'ATTEND';
-type LearningRecord = {
-	verb: LearningRecordVerb;
-	userId: string;
-	learningResourceId: string;
-	timestamp: string;
-};
+type LearningResourceAPIResponseData = {
+    masterId: string;
+    code: string;
+    title: string;
+}[]
+
+type LearningRecordAPIResponseData = {
+    learning_record_verb: LearningRecordVerb;
+    user_id: string;
+    learning_resource_id: string;
+    learning_record_timestamp: string;
+}[]
 
 type UserState = {
     isLoading: boolean;
@@ -86,19 +80,6 @@ export default function useAppData(): AppData {
         getUserRecords,
     }
 }
-
-type LearningResourceAPIResponseData = {
-    masterId: string;
-    code: string;
-    title: string;
-}[]
-
-type LearningRecordAPIResponseData = {
-    learning_record_verb: LearningRecordVerb;
-    user_id: string;
-    learning_resource_id: string;
-    learning_record_timestamp: string;
-}[]
 
 function normalizeLearningResourceData(data: LearningResourceAPIResponseData) {
     return data.map((resource) => ({
