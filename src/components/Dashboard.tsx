@@ -18,10 +18,11 @@ export default function Dashboard(): React.ReactElement {
     const { isLoading, users, learningResources, learningRecords } = useAppData();
 
     return (
-        <>
+        <div data-testid='dashboard-component'>
             <Row>
                 <Col>
                     <Segmented
+                        data-testid='category-options-component'
                         options={CATEGORY_OPTIONS}
                         defaultValue='resource'
                         onChange={(value) => setCategory(value as Category)}
@@ -46,6 +47,6 @@ export default function Dashboard(): React.ReactElement {
                     }
                 </Col>
             </Row>
-        </>
+        </div>
     );
 }
