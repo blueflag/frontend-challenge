@@ -12,8 +12,9 @@ type LearningResource = {
 	code: string;
 	title: string;
 };
+type LearningRecordVerb = 'ATTEMPT' | 'COMPLETE' | 'FAIL' | 'PASS' | 'ENROL' | 'ATTEND';
 type LearningRecord = {
-	verb: 'ATTEMPT' | 'COMPLETE' | 'FAIL' | 'PASS' | 'ENROL' | 'ATTEND';
+	verb: LearningRecordVerb;
 	userId: string;
 	learningResourceId: string;
 	timestamp: string;
@@ -58,7 +59,7 @@ export default function useAppData(): AppData {
             .then((response) =>
                 setLearningResourceState({
                     isLoading: false,
-                    data: response.data
+                    data: normalizeLearningResourceData(response.data)
                 })
             );
 
@@ -66,7 +67,7 @@ export default function useAppData(): AppData {
             .then((response) =>
                 setLearningRecordState({
                     isLoading: false,
-                    data: response.data
+                    data: normalizeLearningRecordData(response.data)
                 })
             );
     }, [])
@@ -84,4 +85,34 @@ export default function useAppData(): AppData {
         learningRecords: learningRecordState.data,
         getUserRecords,
     }
+}
+
+type LearningResourceAPIResponseData = {
+    masterId: string;
+    code: string;
+    title: string;
+}[]
+
+type LearningRecordAPIResponseData = {
+    learning_record_verb: LearningRecordVerb;
+    user_id: string;
+    learning_resource_id: string;
+    learning_record_timestamp: string;
+}[]
+
+function normalizeLearningResourceData(data: LearningResourceAPIResponseData) {
+    return data.map((resource) => ({
+        id: resource.masterId,
+        code: resource.code,
+        title: resource.title,
+    }));
+}
+
+function normalizeLearningRecordData(data: LearningRecordAPIResponseData) {
+    return data.map((record) => ({
+        verb: record.learning_record_verb,
+        userId: record.user_id,
+        learningResourceId: record.learning_resource_id,
+        timestamp: record.learning_record_timestamp,
+    }));
 }
