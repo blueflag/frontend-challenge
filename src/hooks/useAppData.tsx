@@ -32,7 +32,6 @@ type AppData = {
     users: User[];
     learningResources: LearningResource[];
     learningRecords: LearningRecord[];
-    getUserRecords: (userId: string) => LearningRecord[];
 }
 
 export default function useAppData(): AppData {
@@ -66,10 +65,6 @@ export default function useAppData(): AppData {
             );
     }, [])
 
-    const getUserRecords = (userId: string) => {
-        return learningRecordState.data.filter((record) => record.userId === userId);
-    }
-
     const isLoading = userState.isLoading || learningResourceState.isLoading || learningRecordState.isLoading;
 
     return {
@@ -77,7 +72,6 @@ export default function useAppData(): AppData {
         users: userState.data,
         learningResources: learningResourceState.data,
         learningRecords: learningRecordState.data,
-        getUserRecords,
     }
 }
 
