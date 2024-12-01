@@ -44,15 +44,19 @@ export default function UsersList(props: Props): React.ReactElement {
     const [ searchTerm, setSearchTerm ] = useState<string>('');
     const [ sortKey, setSortKey ] = useState<SortKey>('default');
     const [ ordering, setOrdering ] = useState<'asc' | 'desc'>('asc');
+    const [ resourceTitlesFilter, setResourceTitlesFilter ] = useState<string[]>([]);
 
     const normalizedUsers: NormalizedUser[] = normalizeUsers(users, learningResources, learningRecords);
-    const filtered = normalizedUsers.filter((user) => user.fullName.toLowerCase().includes(searchTerm.toLowerCase()));
+    const filtered = normalizedUsers.filter((user) => user.fullName.toLowerCase().includes(searchTerm.toLowerCase()))
+                        .filter((user) => resourceTitlesFilter.every((title) => user.participations.some((resource) => resource.title === title)));
     const sorted = sortKey === 'default' ? filtered : _.orderBy(filtered, sortKey, ordering);
+
+    const learningResourceOptions = learningResources.map((resource) => ({ value: resource.title, label: resource.title }));
 
     return (
         <>
             <Row justify='space-between'>
-                <Col span={24} md={6}>
+                <Col span={24} lg={18}>
                     <span className='mr-2'>Sort by</span>
                     <Select
                         className='mr-2'
@@ -67,8 +71,18 @@ export default function UsersList(props: Props): React.ReactElement {
                         onChange={(value) => setOrdering(value as 'asc' | 'desc')}
                         options={ORDERING_OPTIONS}
                     />
+                    <Select
+                        className='ml-5'
+                        style={{ width: 310 }}
+                        mode='multiple'
+                        placeholder='Filter by Participated Learning Resource'
+                        onChange={(value) => setResourceTitlesFilter(value)}
+                        options={learningResourceOptions}
+                        maxTagCount='responsive'
+                        allowClear
+                    />
                 </Col>
-                <Col span={24} md={12} lg={6} xxl={4} className='mt-4 md:mt-0'>
+                <Col span={24} lg={6} xxl={4} className='mt-4 lg:mt-0'>
                     <Input.Search
                         placeholder='Search for User...'
                         onSearch={(value) => setSearchTerm(value)}
