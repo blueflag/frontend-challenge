@@ -22,6 +22,7 @@ export default function LearningResourceCard(props: Props): React.ReactElement {
 
     return (
         <Card
+            data-testid='learning-resource-card-component'
             size='small'
             title={resource.title}
             extra={<Tag color='blue'>{resource.code}</Tag>}
