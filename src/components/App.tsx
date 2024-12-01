@@ -6,7 +6,7 @@ const { Header, Content, Footer } = Layout;
 
 export default function App(): React.ReactElement {
     return (
-        <Layout>
+        <Layout data-testid='app-layout-component'>
             <Header className='flex align-middle'>
                 <img src='https://blueflag.com.au/assets/logos/blueflag-logo.svg' width='130' alt='logo' />
             </Header>
