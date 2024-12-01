@@ -1,5 +1,6 @@
 import React from 'react';
 import { Layout } from 'antd';
+import Dashboard from './Dashboard';
 
 const { Header, Content, Footer } = Layout;
 
@@ -11,7 +12,7 @@ export default function App(): React.ReactElement {
             </Header>
             <Content className='px-8'>
                 <div className='min-h-screen bg-white mt-8 p-4 rounded'>
-                    Hello World!
+                    <Dashboard />
                 </div>
             </Content>
             <Footer style={{ textAlign: 'center' }}>
