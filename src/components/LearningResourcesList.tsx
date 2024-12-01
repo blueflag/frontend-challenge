@@ -77,9 +77,8 @@ export default function LearningResourcesList(props: Props): React.ReactElement 
                         options={ORDERING_OPTIONS}
                     />
                 </Col>
-                <Col span={24} md={12} lg={6} xxl={4}>
+                <Col span={24} md={12} lg={6} xxl={4} className='mt-4 md:mt-0'>
                     <Input.Search
-                        className='mt-4 md:mt-0'
                         placeholder='Search for Resource Title...'
                         onSearch={(value) => setSearchTerm(value)}
                         onClear={() => setSearchTerm('')}

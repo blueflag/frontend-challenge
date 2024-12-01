@@ -25,7 +25,6 @@ export default function LearningResourceCard(props: Props): React.ReactElement {
             size='small'
             title={resource.title}
             extra={<Tag color='blue'>{resource.code}</Tag>}
-            hoverable
         >
             <p>Participation</p>
             <Tooltip title={`${participants.length} out of ${totalUsers} Users`}>

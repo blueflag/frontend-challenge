@@ -31,7 +31,12 @@ export default function Dashboard(): React.ReactElement {
             <Row className='mt-4'>
                 <Col span={24}>
                     {category === 'user'
-                        ? <UsersList isLoading={isLoading} data={users} />
+                        ? <UsersList
+                            isLoading={isLoading}
+                            users={users}
+                            learningResources={learningResources}
+                            learningRecords={learningRecords}
+                          />
                         : <LearningResourcesList
                             isLoading={isLoading}
                             learningResources={learningResources}
