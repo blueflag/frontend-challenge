@@ -15,7 +15,7 @@ const CATEGORY_OPTIONS: SegmentedOptions = [
 
 export default function Dashboard(): React.ReactElement {
     const [ category, setCategory ] = useState<Category>('resource');
-    const { isLoading, users, learningResources } = useAppData();
+    const { isLoading, users, learningResources, learningRecords } = useAppData();
 
     return (
         <>
@@ -32,7 +32,12 @@ export default function Dashboard(): React.ReactElement {
                 <Col span={24}>
                     {category === 'user'
                         ? <UsersList isLoading={isLoading} data={users} />
-                        : <LearningResourcesList isLoading={isLoading} data={learningResources} />
+                        : <LearningResourcesList
+                            isLoading={isLoading}
+                            data={learningResources}
+                            users={users}
+                            learningRecords={learningRecords}
+                          />
                     }
                 </Col>
             </Row>

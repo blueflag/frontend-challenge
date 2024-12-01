@@ -1,9 +1,12 @@
 import React from 'react';
-import { Card, List } from 'antd';
+import { List } from 'antd';
+import LearningResourceCard from './LearningResourceCard';
 
 type Props = {
     isLoading: boolean;
     data: LearningResource[];
+    users: User[];
+    learningRecords: LearningRecord[];
 }
 
 const GRID_LAYOUT = {
@@ -17,7 +20,24 @@ const GRID_LAYOUT = {
 };
 
 export default function LearningResourcesList(props: Props): React.ReactElement {
-    const { isLoading, data } = props;
+    const { isLoading, data, users, learningRecords } = props;
+
+    const renderListItem = (recource: LearningResource) => {
+        const participants = users.filter((user) => learningRecords.some((record) => record.userId === user.id && record.learningResourceId === recource.id));
+        const records = learningRecords.filter((record) => record.learningResourceId === recource.id);
+
+        return (
+            <List.Item>
+                <LearningResourceCard
+                    key={recource.id}
+                    resource={recource}
+                    totalUsers={users.length}
+                    participants={participants}
+                    learningRecords={records}
+                />
+            </List.Item>
+        )
+    };
 
     return (
         <List
@@ -29,13 +49,7 @@ export default function LearningResourcesList(props: Props): React.ReactElement 
                 pageSize: 12,
             }}
             dataSource={data}
-            renderItem={(recource: LearningResource) => (
-                <List.Item>
-                    <Card size='small' title={recource.title}>
-                        Resource Details
-                    </Card>
-                </List.Item>
-            )}
+            renderItem={renderListItem}
         />
     );
 }
