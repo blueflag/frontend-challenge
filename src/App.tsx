@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "@/components/ui/button";
 
 export default function App(): React.ReactElement {
   return (
@@ -10,7 +11,9 @@ export default function App(): React.ReactElement {
           alt="logo"
         />
       </header>
-      <main className="Main">...</main>
+      <main className="flex justify-center items-center h-screen">
+        <Button>Shadcn Works</Button>
+      </main>
     </div>
   );
 }
