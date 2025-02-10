@@ -1,5 +1,3 @@
-"use client";
-
 import { useMemo } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -245,9 +243,9 @@ export function UsersTab({
 
       <Card className="dark:bg-[#1a202c] dark:border-[#3f444e]">
         <CardContent className="p-6">
-          <div className="flex justify-between items-center mb-4">
+          <div className="flex flex-col sm:flex-row justify-between gap-4 mb-4">
             <h3 className="text-lg font-semibold">Users</h3>
-            <div className="flex items-center gap-2">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2">
               <Input
                 placeholder="Search users..."
                 value={searchTerm}
@@ -292,7 +290,7 @@ export function UsersTab({
               </div>
             </div>
           </div>
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto -mx-6 px-6">
             <Table>
               <TableHeader>
                 <TableRow className="dark:hover:bg-[#2f3441] dark:border-[#3f444e]">
