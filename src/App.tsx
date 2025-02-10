@@ -1,6 +1,6 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toogle";
+import TrainingCourse from "@/components/training-course";
 
 export default function App() {
   return (
@@ -15,8 +15,8 @@ export default function App() {
         </div>
         <ThemeToggle />
       </nav>
-      <main className="flex justify-center items-center h-screen">
-        <Button>Shadcn Works</Button>
+      <main>
+        <TrainingCourse />
       </main>
     </div>
   );
